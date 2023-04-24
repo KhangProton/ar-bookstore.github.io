@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>AR Bookstore</title>
+</head>
+
+<body>
+    <header>
+        <!-- <img src="src/logo.png" alt="Bookstore Logo"> -->
+        <nav>
+            <div class="logo">
+                <a href="./">
+                    <img src="src/logo.png" alt="Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./">Home</a></li>
+                <li><a href="whyread.html">Why Read?</a></li>
+                <li><a href="category.html?category=Fiction">Fiction</a></li>
+                <li><a href="category.html?category=Textbooks">Textbooks</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+
+            <form action="#" method="POST">
+                <div>
+                    <label for="contact-purpose">Contact Purpose:</label>
+                    <select id="contact-purpose" name="contact-purpose">
+                        <option value="sell-books">I want to sell books</option>
+                        <option value="buy-books">I want to buy books</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required />
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required />
+                </div>
+
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required />
+                </div>
+
+                <div>
+                    <span>Contact Preference:</span>
+                    <div>
+                        <input type="checkbox" id="by-email" name="contact-preference" value="email" />
+                        <label for="by-email">By email</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="by-phone" name="contact-preference" value="phone" />
+                        <label for="by-phone">By phone</label>
+                    </div>
+                </div>
+
+                <div>
+                    <span>Receive Weekly Newsletter:</span>
+                    <div>
+                        <input type="radio" id="yes" name="newsletter" value="yes" checked />
+                        <label for="yes">Yes</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="no" name="newsletter" value="no" />
+                        <label for="no">No</label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="notes">Extra Notes:</label>
+                    <textarea id="notes" name="notes"></textarea>
+                </div>
+
+                <div>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <ul>
+            <li><a>About Us</a></li>
+            <li><a>Privacy Policy</a></li>
+            <li><a>Terms</a></li>
+            <li><a>Copyright</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

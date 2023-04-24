@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>AR Bookstore</title>
+</head>
+
+<body>
+    <header>
+        <!-- <img src="src/logo.png" alt="Bookstore Logo"> -->
+        <nav>
+            <div class="logo">
+                <a href="./">
+                    <img src="src/logo.png" alt="Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./">Home</a></li>
+                <li><a href="whyread.html">Why Read?</a></li>
+                <li><a href="category.html?category=Fiction">Fiction</a></li>
+                <li><a href="category.html?category=Textbooks">Textbooks</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- Javascript will insert elements here -->
+    </main>
+
+
+    <footer>
+        <ul>
+            <li><a>About Us</a></li>
+            <li><a>Privacy Policy</a></li>
+            <li><a>Terms</a></li>
+            <li><a>Copyright</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const bookTitle = urlParams.get("title");
+
+        // Redirect to home page if no book title is provided or if book is invalid (i.e. empty string, null, or undefined)
+        if (bookTitle === "" || bookTitle === null || bookTitle === "undefined") {
+            window.location.href = '/';
+        }
+
+        fetch("src/books.json")
+            .then((response) => response.json())
+            .then((books) => {
+                const book = books.find((book) => book.title === bookTitle);
+
+                if (book) {
+                    const categoryTitle = book.category;
+                    const subcategoryTitle = book.subCategory;
+
+                    const breadcrumb = document.createElement("div");
+                    breadcrumb.className = "breadcrumb";
+
+                    const homeLink = document.createElement("a");
+                    homeLink.href = "index.html";
+                    homeLink.textContent = "Home";
+                    breadcrumb.appendChild(homeLink);
+
+                    const categoryLink = document.createElement("a");
+                    categoryLink.href = `category.html?category=${categoryTitle.replace(/ /g, "-")}`;
+                    categoryLink.textContent = categoryTitle;
+                    breadcrumb.appendChild(categoryLink);
+
+                    const subcategoryLink = document.createElement("a");
+                    subcategoryLink.href = `#`;
+                    subcategoryLink.textContent = subcategoryTitle;
+                    breadcrumb.appendChild(subcategoryLink);
+
+                    const main = document.querySelector("main");
+                    main.appendChild(breadcrumb);
+
+                    const bookDetails = document.createElement("div");
+                    bookDetails.className = "book-details";
+
+                    const bookContainer = document.createElement("div");
+                    bookContainer.className = "book-container";
+
+                    const largeImage = document.createElement("a");
+                    largeImage.href = book.images[0].src;
+                    largeImage.target = "_blank";
+                    const largeImageEl = document.createElement("img");
+                    largeImageEl.src = book.images[0].src;
+                    largeImageEl.alt = book.images[0].alt;
+                    largeImage.appendChild(largeImageEl);
+                    bookContainer.appendChild(largeImage);
+
+                    const smallImages = document.createElement("div");
+                    smallImages.className = "small-images";
+
+                    for (let i = 1; i < book.images.length; i++) {
+                        const smallImage = document.createElement("a");
+                        smallImage.href = book.images[i].src;
+                        smallImage.target = "_blank";
+                        const smallImageEl = document.createElement("img");
+                        smallImageEl.src = book.images[i].src;
+                        smallImageEl.alt = book.images[i].alt;
+                        smallImage.appendChild(smallImageEl);
+                        smallImages.appendChild(smallImage);
+                    }
+
+                    bookContainer.appendChild(smallImages);
+
+
+                    const bookPurchase = document.createElement("div");
+                    bookPurchase.className = "book-purchase";
+
+                    const bookPrice = document.createElement("p");
+                    bookPrice.className = "book-price";
+                    bookPrice.textContent = `$${book.price}`;
+                    bookDetails.appendChild(bookPrice);
+
+                    const addToCartButton = document.createElement("button");
+                    addToCartButton.className = "add-to-cart";
+                    addToCartButton.textContent = "Add to Cart";
+                    bookDetails.appendChild(addToCartButton);
+                    bookDetails.appendChild(bookContainer);
+
+                    bookPurchase.appendChild(bookPrice)
+                    bookPurchase.appendChild(addToCartButton)
+                    bookContainer.appendChild(bookPurchase);
+
+                    const bookInfo = document.createElement("div");
+                    bookInfo.className = "book-info";
+
+                    const bookTitle = document.createElement("h2");
+                    bookTitle.textContent = book.title;
+                    bookInfo.appendChild(bookTitle);
+
+                    const bookAuthor = document.createElement("h3");
+                    bookAuthor.textContent = `by ${book.author}`;
+                    bookInfo.appendChild(bookAuthor);
+
+
+                    bookDetails.appendChild(bookInfo);
+
+                    const bookDescription = document.createElement("div");
+                    bookDescription.className = "book-description";
+
+                    const bookDescriptionTitle = document.createElement("h4");
+                    // bookDescriptionTitle.textContent = "Book Description";
+                    bookDescription.appendChild(bookDescriptionTitle);
+
+                    const bookDescriptionText = document.createElement("p");
+                    bookDescriptionText.textContent = book.description;
+                    bookDescription.appendChild(bookDescriptionText);
+
+                    bookDetails.appendChild(bookDescription);
+
+                    main.appendChild(bookDetails);
+                } else {
+                    console.log(`Book ${bookTitle} not found.`);
+                }
+            });
+    </script>
+</body>
+
+</html>

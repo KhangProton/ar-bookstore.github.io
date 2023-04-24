@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>AR Bookstore</title>
+</head>
+
+<body>
+    <header>
+        <!-- <img src="src/logo.png" alt="Bookstore Logo"> -->
+        <nav>
+            <div class="logo">
+                <a href="./">
+                    <img src="src/logo.png" alt="Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="./">Home</a></li>
+                <li><a href="whyread.html">Why Read?</a></li>
+                <li><a href="category.html?category=Fiction">Fiction</a></li>
+                <li><a href="category.html?category=Textbooks">Textbooks</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="container">
+
+        </div>
+    </main>
+    <footer>
+        <ul>
+            <li><a>About Us</a></li>
+            <li><a>Privacy Policy</a></li>
+            <li><a>Terms</a></li>
+            <li><a>Copyright</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </footer>
+    <script>
+        function redirectToBookDetailPage(bookTitle) {
+            const encodedTitle = encodeURIComponent(bookTitle);
+            window.location.href = `bookdetails.html?title=${encodedTitle}`;
+        }
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get("category");
+        fetch("src/books.json")
+            .then((response) => response.json())
+            .then((books) => {
+                fetch("src/categories.json")
+                    .then((response) => response.json())
+                    .then((categories) => {
+                        const categoryData = categories[category];
+
+                        if (categoryData) {
+                            const subcategories = categoryData.subcategories;
+
+                            const container = document.querySelector(".container");
+
+                            for (let subcategory of subcategories) {
+                                const bookListWrapper = document.createElement("div");
+                                bookListWrapper.className = "book-list-wrapper";
+
+                                const bookList = document.createElement("div");
+                                bookList.id = `book-list`;
+                                bookList.className = "scrollable";
+
+                                const booksInSubcategory = books.filter(
+                                    (book) =>
+                                        book.category.toLowerCase() === category.toLowerCase() &&
+                                        book.subCategory.toLowerCase() === subcategory.toLowerCase()
+                                );
+
+                                if (booksInSubcategory.length < 6) {
+                                    const emptyBook = {
+                                        images: [{ src: "src/bookimages/empty-book.jpg", alt: "" }],
+                                    };
+                                    const emptySlots = 6 - booksInSubcategory.length;
+                                    for (let i = 0; i < emptySlots; i++) {
+                                        booksInSubcategory.push(emptyBook);
+                                    }
+                                }
+
+                                for (let book of booksInSubcategory) {
+                                    const bookElement = document.createElement("div");
+                                    bookElement.className = "book";
+                                    bookElement.innerHTML = `
+                  <img src="${book.images[0].src}" alt="${book.images[0].alt
+                                        }" onclick="redirectToBookDetailPage('${book.title}')">
+                  <a onclick="redirectToBookDetailPage('${book.title}')">${book.title || ""
+                                        }</a>
+                `;
+                                    bookList.appendChild(bookElement);
+                                }
+
+                                if (bookList.childNodes.length > 0) {
+                                    const subcategoryHeader = document.createElement("div");
+                                    subcategoryHeader.className = `header-category`;
+
+                                    const subcategoryTitle = document.createElement("a");
+                                    subcategoryTitle.textContent = subcategory;
+                                    subcategoryTitle.href = "#";
+
+                                    subcategoryHeader.appendChild(subcategoryTitle);
+
+                                    bookListWrapper.appendChild(bookList);
+
+                                    container.appendChild(subcategoryHeader);
+                                    container.appendChild(bookListWrapper);
+                                }
+                            }
+                        } else {
+                            console.log(`Category ${category} not found.`);
+                        }
+                    });
+            });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+{
+    "Fiction": {
+      "subcategories": [
+        "Literary Fiction",
+        "Romance",
+        "Science Fiction",
+        "Fantasy",
+        "Mystery/Thriller",
+        "Horror",
+        "Historical Fiction",
+        "Young Adult"
+      ]
+    },
+    "Non-Fiction": {
+      "subcategories": [
+        "Biographies and Memoirs",
+        "Self-help",
+        "History",
+        "Science and Technology",
+        "Politics and Current Affairs",
+        "Travel",
+        "Cooking and Food",
+        "Business and Finance",
+        "Art and Photography"
+      ]
+    },
+    "Children's-Books": {
+      "subcategories": [
+        "Picture Books",
+        "Early Readers",
+        "Chapter Books",
+        "Middle Grade",
+        "Young Adult"
+      ]
+    },
+    "Reference-Books": {
+      "subcategories": [
+        "Dictionaries",
+        "Encyclopedias",
+        "Atlases",
+        "Thesauruses",
+        "Almanacs"
+      ]
+    },
+    "Textbooks": {
+      "subcategories": [
+        "Math and Science",
+        "Social Sciences",
+        "Humanities",
+        "Professional and Technical"
+      ]
+    }
+  }
+  

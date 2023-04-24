@@ -1,0 +1,321 @@
+[
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "publisher": "Charles Scribner's Sons",
+        "publicationYear": 1925,
+        "isbn": "9780743273565",
+        "description": "The story of the mysteriously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan.",
+        "price": 12.99,
+        "category": "Fiction",
+        "subCategory": "Literary Fiction",
+        "images": [
+            {
+                "src": "src/bookimages/thegreatgatsby.jpg",
+                "alt": "The Great Gatsby book cover"
+            },
+            {
+                "src": "src/bookimages/thegreatgatsby.jpg",
+                "alt": "The Great Gatsby book back cover"
+            },
+            {
+                "src": "src/bookimages/thegreatgatsby.jpg",
+                "alt": "The Great Gatsby book inside page"
+            },
+            {
+                "src": "src/bookimages/thegreatgatsby.jpg",
+                "alt": "The Great Gatsby book inside page"
+            }
+        ]
+    },
+    {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "publisher": "J. B. Lippincott & Co.",
+        "publicationYear": 1960,
+        "isbn": "9780060935467",
+        "description": "The story of racial injustice and the loss of innocence in a Southern town.",
+        "price": 10.99,
+        "category": "Fiction",
+        "subCategory": "Mystery/Thriller",
+        "images": [
+            {
+                "src": "src/bookimages/tokillamockingbird.jpg",
+                "alt": "To Kill a Mockingbird book cover"
+            },
+            {
+                "src": "src/bookimages/tokillamockingbird.jpg",
+                "alt": "To Kill a Mockingbird book back cover"
+            },
+            {
+                "src": "src/bookimages/tokillamockingbird.jpg",
+                "alt": "To Kill a Mockingbird book inside page"
+            },
+            {
+                "src": "src/bookimages/tokillamockingbird.jpg",
+                "alt": "To Kill a Mockingbird book inside page"
+            }
+        ]
+    },
+    {
+        "title": "The Catcher in the Rye",
+        "author": "J. D. Salinger",
+        "publisher": "Little, Brown and Company",
+        "publicationYear": 1951,
+        "isbn": "9780316769174",
+        "description": "The story of teenage angst and alienation in a world that seems phony and corrupt.",
+        "price": 9.99,
+        "category": "Fiction",
+        "subCategory": "Literary Fiction",
+        "images": [
+            {
+                "src": "src/bookimages/thecatcherintheeye.jpg",
+                "alt": "The Catcher in the Rye book cover"
+            },
+            {
+                "src": "src/bookimages/thecatcherintheeye.jpg",
+                "alt": "The Catcher in the Rye book back cover"
+            },
+            {
+                "src": "src/bookimages/thecatcherintheeye.jpg",
+                "alt": "The Catcher in the Rye book inside page"
+            },
+            {
+                "src": "src/bookimages/thecatcherintheeye.jpg",
+                "alt": "The Catcher in the Rye book inside page"
+            }
+        ]
+    },
+    {
+        "title": "Me Before You",
+        "author": "Jojo Moyes",
+        "publisher": "Penguin Books",
+        "publicationYear": 2012,
+        "isbn": "9780670026609",
+        "description": "The story of a young woman who becomes a caregiver for a quadriplegic man.",
+        "price": 11.99,
+        "category": "Fiction",
+        "subCategory": "Romance",
+        "images": [
+            {
+                "src": "src/bookimages/mebeforeyou.png",
+                "alt": "Me Before You book cover"
+            },
+            {
+                "src": "src/bookimages/mebeforeyou.png",
+                "alt": "Me Before You book back cover"
+            },
+            {
+                "src": "src/bookimages/mebeforeyou.png",
+                "alt": "Me Before You book inside page"
+            },
+            {
+                "src": "src/bookimages/mebeforeyou.png",
+                "alt": "Me Before You book inside page"
+            }
+        ]
+    },
+    {
+        "title": "Steve Jobs",
+        "author": "Walter Isaacson",
+        "publisher": "Simon & Schuster",
+        "publicationYear": 2011,
+        "isbn": "9781451648539",
+        "description": "A biography of Apple Inc. co-founder and CEO, Steve Jobs.",
+        "price": 16.99,
+        "category": "Non-Fiction",
+        "subCategory": "Biographies and Memoirs",
+        "images": [
+            {
+                "src": "src/bookimages/stevejobs.jpg",
+                "alt": "Steve Jobs book cover"
+            },
+            {
+                "src": "src/bookimages/mebeforeyou.jpg",
+                "alt": "Me Before You book back cover"
+            },
+            {
+                "src": "src/bookimages/mebeforeyou.jpg",
+                "alt": "Me Before You book inside page"
+            },
+            {
+                "src": "src/bookimages/mebeforeyou.jpg",
+                "alt": "Me Before You book inside page"
+            }
+        ]
+    },
+    {
+        "title": "Atomic Habits",
+        "author": "James Clear",
+        "publisher": "Avery",
+        "publicationYear": 2018,
+        "isbn": "9780735211292",
+        "description": "A guide to building good habits and breaking bad ones.",
+        "price": 14.99,
+        "category": "Non-Fiction",
+        "subCategory": "Self-help",
+        "images": [
+            {
+                "src": "src/bookimages/atomichabits.jpg",
+                "alt": "Atomic Habits book cover"
+            },
+            {
+                "src": "src/bookimages/atomichabits.jpg",
+                "alt": "Atomic Habits book back cover"
+            },
+            {
+                "src": "src/bookimages/atomichabits.jpg",
+                "alt": "Atomic Habits book inside page"
+            },
+            {
+                "src": "src/bookimages/atomichabits.jpg",
+                "alt": "Atomic Habits book inside page"
+            }
+        ]
+    },
+    {
+        "title": "Sapiens: A Brief History of Humankind",
+        "author": "Yuval Noah Harari",
+        "publisher": "HarperCollins",
+        "publicationYear": 2014,
+        "isbn": "9780062316097",
+        "description": "An exploration of the history of the human species.",
+        "price": 15.99,
+        "category": "Non-Fiction",
+        "subCategory": "History",
+        "images": [
+            {
+                "src": "src/bookimages/sapiens.webp",
+                "alt": "Sapiens book cover"
+            },
+            {
+                "src": "src/bookimages/sapiens.webp",
+                "alt": "Sapiens book back cover"
+            },
+            {
+                "src": "src/bookimages/sapiens.webp",
+                "alt": "Sapiens book inside page"
+            },
+            {
+                "src": "src/bookimages/sapiens.webp",
+                "alt": "Sapiens book inside page"
+            }
+        ]
+    },
+    {
+        "title": "A Brief History of Time",
+        "author": "Stephen Hawking",
+        "publisher": "Bantam",
+        "publicationYear": 1988,
+        "isbn": "9780553380163",
+        "description": "A popular-science book on cosmology and the nature of time.",
+        "price": 12.99,
+        "category": "Non-Fiction",
+        "subCategory": "Science and Technology",
+        "images": [
+            {
+                "src": "src/bookimages/abriefhistoryoftime.jpg",
+                "alt": "A Brief History of Time book cover"
+            },
+            {
+                "src": "src/bookimages/abriefhistoryoftime.jpg",
+                "alt": "A Brief History of Time book back cover"
+            },
+            {
+                "src": "src/bookimages/abriefhistoryoftime.jpg",
+                "alt": "A Brief History of Time book inside page"
+            },
+            {
+                "src": "src/bookimages/abriefhistoryoftime.jpg",
+                "alt": "A Brief History of Time book inside page"
+            }
+        ]
+    },
+    {
+        "title": "The Fifth Risk",
+        "author": "Michael Lewis",
+        "publisher": "W. W. Norton & Company",
+        "publicationYear": 2018,
+        "isbn": "9781324002642",
+        "description": "A look at the United States government under the Trump administration.",
+        "price": 13.99,
+        "category": "Non-Fiction",
+        "subCategory": "Politics and Current Affairs",
+        "images": [
+            {
+                "src": "src/bookimages/thefifthrisk.jpg",
+                "alt": "The Fifth Risk book cover"
+            },
+            {
+                "src": "src/bookimages/thefifthrisk.jpg",
+                "alt": "The Fifth Risk book back cover"
+            },
+            {
+                "src": "src/bookimages/thefifthrisk.jpg",
+                "alt": "The Fifth Risk book inside page"
+            },
+            {
+                "src": "src/bookimages/thefifthrisk.jpg",
+                "alt": "The Fifth Risk book inside page"
+            }
+        ]
+    },
+    {
+        "title": "Salt, Fat, Acid, Heat",
+        "author": "Samin Nosrat",
+        "publisher": "Simon & Schuster",
+        "publicationYear": 2017,
+        "isbn": "9781476753836",
+        "description": "A guide to mastering the elements of good cooking.",
+        "price": 18.99,
+        "category": "Non-Fiction",
+        "subCategory": "Cooking and Food",
+        "images": [
+            {
+                "src": "src/bookimages/saltfatacidheat.jpg",
+                "alt": "Salt, Fat, Acid, Heat book cover"
+            },
+            {
+                "src": "src/bookimages/saltfatacidheat.jpg",
+                "alt": "Salt, Fat, Acid, Heat book back cover"
+            },
+            {
+                "src": "src/bookimages/saltfatacidheat.jpg",
+                "alt": "Salt, Fat, Acid, Heat book inside page"
+            },
+            {
+                "src": "src/bookimages/saltfatacidheat.jpg",
+                "alt": "Salt, Fat, Acid, Heat book inside page"
+            }
+        ]
+    },
+    {
+        "title": "The Intelligent Investor",
+        "author": "Benjamin Graham",
+        "publisher": "HarperCollins",
+        "publicationYear": 1949,
+        "isbn": "9780060555665",
+        "description": "A guide to investing in stocks and bonds.",
+        "price": 19.99,
+        "category": "Non-Fiction",
+        "subCategory": "Business and Finance",
+        "images": [
+            {
+                "src": "src/bookimages/theintelligentinvestor.jpg",
+                "alt": "The Intelligent Investor book cover"
+            },
+            {
+                "src": "src/bookimages/theintelligentinvestor.jpg",
+                "alt": "The Intelligent Investor book back cover"
+            },
+            {
+                "src": "src/bookimages/theintelligentinvestor.jpg",
+                "alt": "The Intelligent Investor book inside page"
+            },
+            {
+                "src": "src/bookimages/theintelligentinvestor.jpg",
+                "alt": "The Intelligent Investor book inside page"
+            }
+        ]
+    }
+]
