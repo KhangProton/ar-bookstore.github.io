@@ -1,3 +1,12 @@
+// RMIT University Vietnam
+// Course: COSC2430 Web Programming
+// Semester: 2023A
+// Assessment: Assignment 1
+// Author: Nguyen Dang Duy Khang
+// ID: s3979229
+// Acknowledgement: Included in the report
+
+
 function displayBooksByCategory() {
     console.log("haha");
     fetch("src/books.json")
